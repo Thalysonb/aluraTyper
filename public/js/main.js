@@ -25,7 +25,6 @@ campo.on('input',function(){
 
 
 var tempoRestante = $("#tempo-digitacao").text();
-
 campo.one('focus',function(){
     var cronometroId = setInterval(function(){
         tempoRestante--;
