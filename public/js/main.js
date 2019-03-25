@@ -3,7 +3,7 @@ var tempoInicial = $("#tempo-digitacao").text();
 var tempo = tempoInicial;
 var campo = $(".campo-digitacao");
 
-$(document).ready(function(){
+$(document).ready(function(){ //inicializa o jQuery
     atualizaTamanhoFrase();
     inicializaContadores();
     inicializacronometro();
@@ -11,6 +11,16 @@ $(document).ready(function(){
         reiniciaJogo();
     });
     inicializaMarcadores();
+    atualizaPlacar();
+    $('#usuarios').selectize({
+        create: true,
+        sortField: 'text'
+    });
+
+    $(".tooltip").tooltipster({
+        trigger: "custom"
+    });
+
 })
 
 
